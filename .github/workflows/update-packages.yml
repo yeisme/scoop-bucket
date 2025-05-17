@@ -7,7 +7,7 @@ on:
 
 jobs:
   excavate:
-    name: 检查软件包更新
+    name: 自动检查软件包更新
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
@@ -20,3 +20,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SKIP_UPDATED: '1'
+          COMMIT_MESSAGE: "自动更新: $manifest -> $version"
+          PR_TITLE: "自动更新: $manifest ($version)"
