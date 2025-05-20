@@ -1,0 +1,23 @@
+{
+    "version": "0.6.3",
+    "description": "Top-like tool for monitoring NATS servers",
+    "homepage": "https://github.com/nats-io/nats-top",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/nats-io/nats-top/releases/download/v0.6.3/nats-top_0.6.3_windows_amd64.tar.gz",
+            "hash": "cf90fdb055ca0c423aa1c1695d21bf6f155588ae571e9c1303cea1ae54ac415f"
+        }
+    },
+    "bin": "nats-top.exe",
+    "checkver": {
+        "github": "https://github.com/nats-io/nats-top"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/nats-io/nats-top/releases/download/v$version/nats-top_$version_windows_amd64.tar.gz"
+            }
+        }
+    }
+}
