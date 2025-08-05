@@ -13,17 +13,23 @@
             "hash": ""
         }
     },
-    "bin": "xgo.exe",
+    "extract_dir": "xgo1.5.0.windows-amd64",
+    "bin": [
+        "bin\\xgo.exe",
+        "bin\\gop.exe"
+    ],
     "checkver": {
         "github": "https://github.com/goplus/xgo"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/goplus/xgo/releases/download/v$version/xgo$version.windows-amd64.zip"
+                "url": "https://github.com/goplus/xgo/releases/download/v$version/xgo$version.windows-amd64.zip",
+                "extract_dir": "xgo$version.windows-amd64"
             },
             "arm64": {
-                "url": "https://github.com/goplus/xgo/releases/download/v$version/xgo$version.windows-arm64.zip"
+                "url": "https://github.com/goplus/xgo/releases/download/v$version/xgo$version.windows-arm64.zip",
+                "extract_dir": "xgo$version.windows-arm64"
             }
         }
     }
